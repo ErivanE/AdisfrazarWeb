@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Productos</title>
+</head>
+<body>
+    <h1>Agregar Productos</h1>
+    <form action="../php/crudProductoVenta.php" method="post">
+        <label for="id" id="labelID">Id</label>
+        <input type="text" name="id" id="id" value="0">
+        <br>
+        <label for="tipo" id="labelTipo">Tipo</label>
+        <input type="text" name="tipo" id="tipo">
+        <br>
+        
+        <label for="nombre" id="labelNombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+        
+        <label for="talla" id="labelTalla">Talla</label>
+        <input type="text" name="talla" id="talla">
+        <br>
+        
+        <label for="genero" id="labelGenero">Genero</label>
+        <input type="text" name="genero" id="genero">
+        <br>
+
+        <label for="descripcion" id="labelDescripcion">Descripcion</label>
+        <input type="text" name="descripcion" id="descripcion">
+        <br>
+
+        <label for="cantidad" id="labelCantidad">Cantidad</label>
+        <input type="text" name="cantidad" id="cantidad">
+        <br>
+
+        <label for="precio" id="labelprecio">Precio</label>
+        <input type="text" name="precio" id="precio">
+        <br>
+
+        <input type="submit" value="Agregar" id="agregarProductoVenta" name="agregarProductoVenta">
+    </form>
+
+    <iframe src="verProductos.php" title="Productos" frameborder="1" width="100%" height="450px"></iframe>
+</body>
+</html>
