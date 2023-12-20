@@ -31,11 +31,26 @@ if(isset($_POST['agregarProductoVenta'])){
             '$descripcion',
             '$precio'
             )");
-    header("location: ../index.html");
-}
+    header("location: ../html/crudProductosVenta.html");
+}else 
 //modificar
-
+if(isset ($_POST['modificarProductoVenta'])){
+    $consulta = $conn -> query("UPDATE productoventa
+                    SET nombre = '$nombre',
+                    tipo = '$tipo',
+                    talla = '$talla',
+                    genero = '$genero',
+                    cantidad = '$cantidad',
+                    descripcion = '$descripcion',
+                    precio = '$precio'
+                    WHERE idProductoVenta = '$idProductoVenta'");
+    header("location: ../html/crudProductosVenta.html");
+}else
 //ver
-
 //eliminar
+if(isset($_POST['eliminarProductoVenta'])){
+    $indice = $_POST['id'];
+    $consulta = $conn -> query("DELETE FROM productoventa WHERE idProductoVenta = '$indice'");
+    header("location: ../html/crudProductosVenta.html");
+}
 ?>

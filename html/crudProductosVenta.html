@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Productos</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Adisfrazar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Barra de navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nab">
+                    <!-- <a href="" class="nav-link">Inicio</a>
+                    <a href="" class="nav-link">Agregar</a>
+                    <a href="" class="nav-link">Modificar</a>
+                    <a href="" class="nav-link">Eliminar</a> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--  -->
+    <main class="container min-vh-100 bg-light">
+        <div class="row">
+            <div class="col-12">
+                <h1>Productos Venta</h1>
+            </div>
+        </div>
+        <div class="row">
+            <!-- opciones -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <form action="../php/crudProductoVenta.php" method="post" class="mt-5">
+                    <!-- id -->
+                    <div class="row mb-1">
+                        <div class="col-12 col-md-3">
+                            <label for="id" class="form-label">Id</label>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="id" id="id" class="form-control">
+                        </div>
+                    </div>
+                    <!-- tipo -->
+                    <div class="row mb-1">
+                        <div class="col-12 col-md-3">
+                            <label for="tipo" class="form-label">Tipo</label>
+                        </div>
+                        <div class="col">
+                            <select name="tipo" id="tipo" class="form-select" aria-label="Selecciona el tipo">
+                                <option selected>Selecciona una opcion</option>
+                                <option value="disfraz">Disfraz</option>
+                                <option value="chemis">Chemis</option>
+                                <option value="malla">Malla</option>
+                                <option value="leotardo">Leotardo</option>
+                                <option value="sombrero">Sombrero</option>
+                                <option value="diadema">Diadema</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- nombre -->
+                    <div class="row mb-1">
+                        <div class="col-12 col-md-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="nombre" id="nombre" class="form-control">
+                        </div>
+                    </div>
+                    <!-- talla -->
+                    <div class="row mb-1">
+                        <div class="col-12 col-md-3">
+                            <label for="talla" class="form-label">Talla</label>
+                        </div>
+                        <div class="col">
+                            <!-- <input type="text" name="talla" id="talla" class="form-control"> -->
+                            <select name="talla" id="talla" class="form-select">
+                                <option selected>Selecciona una talla</option>
+                                <option value="0">0</option>
+                                <option value="2">2</option>
+                                <option value="4">4</option>
+                                <option value="6">6</option>
+                                <option value="8">8</option>
+                                <option value="10">10</option>
+                                <option value="12">12</option>
+                                <option value="14">14</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- genero -->
+                    <div class="row mb-1">
+                        <div class="col-12 col-md-3">
+                            <label for="talla" class="form-label">Genero</label>
+                        </div>
+                        <div class="col">
+                            <!-- <input type="text" name="genero" id="genero" class="form-control"> -->
+                            <select name="genero" id="genero" class="form-select">
+                                <option selected>Selecciona un genero</option>
+                                <option value="Niño">Niño</option>
+                                <option value="Niña">Niña</option>
+                                <option value="Unisex">Unisex</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- descripcion -->
+                    <div class="row mb-1">
+                        <div class="col-12 col-md-3">
+                            <label for="descripcion" class="form-label">Descripcion</label>
+                        </div>
+                        <div class="col">
+                            <!-- <input type="text" name="descripcion" id="descripcion" class="form-control"> -->
+                            <div class="form-floating">
+                                <textarea name="descripcion" id="descripcion" cols="30" rows="10" class="form-control"></textarea>
+                                <label for="descripcion">Descripcion</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cantidad -->
+                    <div class="row mb-1">
+                        <div class="col-12 col-md-3">
+                            <label for="cantidad" class="form-label">Cantidad</label>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="cantidad" id="cantidad" class="form-control">
+                        </div>
+                    </div>
+                    <!-- precio -->
+                    <div class="row mb-1">
+                        <div class="col-12 col-md-3">
+                            <label for="precio" class="form-label">Precio</label>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="precio" id="precio" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- acciones -->
+                    <div class="row mb-1 mt-3 text-center">
+                        <div class="col-12">
+                            <button type="submit" name="agregarProductoVenta" class="btn btn-primary"><i class="bi bi-plus-square"></i></button>
+                            <button type="submit" name="modificarProductoVenta" class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+                            <button type="submit" name="eliminarProductoVenta" class="btn btn-primary"><i class="bi bi-trash"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- tabla -->
+            <div class="col-12 col-md-6 col-lg-8">
+                <iframe src="verProductos.php" title="Productos" frameborder="1" width="100%" height="450px"></iframe>
+            </div>
+        </div>
+    </main>
+    <script src="../js/bootstrap.bundle.js"></script>
+</body>
+</html>
